@@ -1,0 +1,24 @@
+{
+    "name": "Custom google homepage",
+    "description": "Customizes google homepage with a specific image",
+    "version": "0.1",
+
+    "permissions": [
+    "tabs","https://www.google.com/"
+    ],
+    "browser_action": {
+        "default_icon": "image.png"
+    },
+
+    "content_scripts": [
+        {
+        "matches": [
+           "https://www.google.com/"
+            ],
+        "js": ["code.js"],
+        "run_at": "document_end"
+        }    ],
+    "manifest_version":2,
+"web_accessible_resources" :["image.png"]
+
+}
